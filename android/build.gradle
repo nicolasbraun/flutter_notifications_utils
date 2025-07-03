@@ -1,0 +1,46 @@
+group 'com.example.flutter_notifications_utils'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.6.0")
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace = "com.example.flutter_notifications_utils"
+    if (project.hasProperty("flutter")) {
+        compileSdk = flutter.compileSdkVersion
+        ndkVersion = flutter.ndkVersion
+        defaultConfig {
+            minSdk = flutter.minSdkVersion
+            targetSdk = flutter.targetSdkVersion
+        }
+    } else {
+        compileSdk = 35
+        defaultConfig {
+            minSdk = 21
+            targetSdk = 35
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+}

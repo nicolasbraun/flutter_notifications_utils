@@ -1,0 +1,30 @@
+name: flutter_notifications_utils
+description: A Flutter plugin for managing Android and iOS notifications (clear, create channels, get count).
+version: 0.0.1
+homepage: https://github.com/nicolasbraun/flutter_notifications_utils
+issue_tracker: https://github.com/nicolasbraun/flutter_notifications_utils/issues
+platforms:
+  android:
+  ios:
+
+environment:
+  sdk: ">=2.15.0 <4.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.flutter_notifications_utils
+        pluginClass: FlutterNotificationsUtilsPlugin
+      ios:
+        pluginClass: FlutterNotificationsUtilsPlugin
